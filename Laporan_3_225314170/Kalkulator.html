@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="kalku.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="kotak">
+            <div class="tulisan">
+                <span>Kalkulator Tambah/Kurang</span>
+
+                <div class="bilangan1">
+                    <input type="Number" id="Number1" placeholder="angka pertama">
+                </div>
+                <div class="bilangan2">
+                    <input type="Number" id="Number2" placeholder="angka kedua">
+                </div>
+                <div></div>
+                <div class="Tombol">
+                    <button id="Tambah" onclick="operasi(this.id)">Tambah</button>
+                    <button id="Kurang" onclick="operasi(this.id)">Kurang</button>
+                </div>
+                <div class="Hasil">
+                    <span>Hasil</span>
+                    <p id="Hasil"></p>
+                </div>
+
+            </div>
+            <div>
+                
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        function operasi(tombol) {
+            var Number1 = parseFloat(document.getElementById("Number1").value);
+            var Number2 = parseFloat(document.getElementById("Number2").value);
+
+            if (tombol == "Tambah") {
+                hasil = Number1 + Number2
+                document.getElementById("Hasil").innerHTML = hasil
+            } else {
+                hasil = Number1 - Number2
+                document.getElementById("Hasil").innerHTML = hasil
+            }
+        }
+
+    </script>
+</body>
+
+</html>
